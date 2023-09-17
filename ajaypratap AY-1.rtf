@@ -1,0 +1,385 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red255\green255\blue0;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs48\lang9 Program 1\par
+#include \highlight1 <stdio.h>\par
+\highlight0 int main() \{\par
+ float originalPrice, taxRate, totalPrice;\par
+ printf("Enter the original price of the product: $");\par
+ scanf("%f", &originalPrice);\par
+ printf("Enter the sales tax rate (in percentage): ");\par
+ scanf("%f", &taxRate);\par
+ totalPrice = originalPrice + (originalPrice * (taxRate / 100));\par
+ printf("The total price after adding %.2f%% sales tax is: $%.2f\\n", taxRate, totalPrice);\par
+ return 0;\par
+\}\par
+Program 2\par
+#include \highlight1 <stdio.h>\par
+\highlight0 int main() \{\par
+ float hourlyWage, weeklyWage;\par
+ int hoursWorked;\par
+ printf("Enter the hourly wage: $");\par
+ scanf("%f", &hourlyWage);\par
+ printf("Enter the number of hours worked in a week: ");\par
+ scanf("%d", &hoursWorked);\par
+ if (hoursWorked > 30) \{\par
+ weeklyWage = 30 * hourlyWage;\par
+ weeklyWage += (hoursWorked - 30) * (2 * hourlyWage);\par
+ \} else \{\par
+ weeklyWage = hoursWorked * hourlyWage;\par
+ \}\par
+ printf("The weekly wage is: $%.2f\\n", weeklyWage);\par
+ return 0;\par
+\}\par
+Program3\par
+#include \highlight1 <stdio.h>\par
+\highlight0 int main() \{\par
+ float totalCost, amountPaid, amountReturned;\par
+ float applePricePerKg = 50.0;\par
+ float mangoPricePerKg = 35.0;\par
+ float potatoPricePerKg = 10.0;\par
+ float tomatoPricePerKg = 15.0;\par
+ float kgApple = 2.0;\par
+ float kgMango = 1.5;\par
+ float kgPotato = 2.5;\par
+ float kgTomato = 1.0;\par
+ totalCost = (kgApple * applePricePerKg) + (kgMango * mangoPricePerKg) + (kgPotato * \par
+potatoPricePerKg) + (kgTomato * tomatoPricePerKg);\par
+ amountPaid = 500.0;\par
+ amountReturned = amountPaid - totalCost;\par
+ printf("Amount to be returned to Mr. X: Rs. %.2f\\n", amountReturned);\par
+ return 0;\par
+\}\par
+Program 4\par
+#include \highlight1 <stdio.h>\highlight0\par
+int main() \{\par
+ printf("Your Name\\n");\par
+ printf("Date of Birth\\n");\par
+ printf("Mobile Number\\n");\par
+ return 0;\par
+\}\par
+Program 5\par
+#include \highlight1 <stdio.h>\highlight0\par
+int main() \{\par
+ int integerInput;\par
+ char charInput;\par
+ float floatInput;\par
+ printf("Enter an integer: ");\par
+ scanf("%d", &integerInput);\par
+ printf("Enter a character: ");\par
+ scanf(" %c", &charInput);\par
+ printf("Enter a float value: ");\par
+ scanf("%f", &floatInput);\par
+ printf("Integer: %d\\n", integerInput);\par
+ printf("Character: %c\\n", charInput);\par
+ printf("Float: %.2f\\n", floatInput);\par
+ return 0;\par
+\}\par
+Program 6\par
+#include <stdio.h>\par
+int main() \{\par
+ float cost = 172.53;\par
+ printf("The sales total is: $ %.2f\\n", cost);\par
+ return 0;\par
+\}\par
+Program 7\par
+#include <stdio.h>\par
+int main() \{\par
+ int applesFromRaghu = 6;\par
+ float applesFromSheenu = 0.5;\par
+ int applesFromAkash = 6;\par
+ float totalApples = applesFromRaghu + applesFromSheenu + applesFromAkash;\par
+ printf("Raju has a total of %.1f apples.\\n", totalApples);\par
+ return 0;\par
+\}\par
+Program 8\par
+#include <stdio.h>\par
+int main() \{\par
+ double floatValue;\par
+ printf("Enter a floating-point value: ");\par
+ scanf("%lf", &floatValue);\par
+ printf("Value in exponential format: %.2e\\n", floatValue);\par
+ return 0;\par
+\}\par
+Program 9\par
+#include <stdio.h>\par
+int main() \{\par
+ long long int mobileNumber;\par
+ printf("Enter your 10-digit mobile number: ");\par
+ scanf("%lld", &mobileNumber);\par
+ printf("Your mobile number is: %lld\\n", mobileNumber);\par
+ return 0;\par
+\}\par
+Program 10\par
+#include <stdio.h>\par
+int main() \{\par
+ int initialPopulation = 30000;\par
+ float growthRateYear1 = 0.20;\par
+ float growthRateYear2 = 0.30;\par
+ float populationYear1 = initialPopulation + (initialPopulation * growthRateYear1);\par
+ float populationYear2 = populationYear1 + (populationYear1 * growthRateYear2);\par
+ printf("The population after two years is: %.0f\\n", populationYear2);\par
+ return 0;\par
+\}\par
+Program11\par
+#include <stdio.h>\par
+int main() \{\par
+ char character;\par
+ \par
+ printf("Enter a character: ");\par
+ scanf("%c", &character);\par
+ \par
+ printf("The ASCII value of '%c' is %d\\n", character, character);\par
+ \par
+ return 0;\par
+\}\par
+Program12\par
+#include <stdio.h>\par
+int main() \{\par
+ float basicPay, HRA, TA, salary;\par
+ printf("Enter the basic pay of the employee: $");\par
+ scanf("%f", &basicPay);\par
+ HRA = 0.15 * basicPay;\par
+ TA = 0.20 * basicPay;\par
+ salary = basicPay + HRA + TA;\par
+ printf("Salary of the employee is: $%.2f\\n", salary);\par
+ return 0;\par
+\}\par
+Program13\par
+#include <stdio.h>\par
+#include <math.h>\par
+int main() \{\par
+ float xp, yp, xq, yq, slope, angle;\par
+ printf("Enter the coordinates of point P (xp yp): ");\par
+ scanf("%f %f", &xp, &yp);\par
+ printf("Enter the coordinates of point Q (xq yq): ");\par
+ scanf("%f %f", &xq, &yq);\par
+ slope = (yq - yp) / (xq - xp);\par
+ angle = atan(slope) * 180 / M_PI;\par
+ printf("Slope of the line: %.2f\\n", slope);\par
+ printf("Angle of inclination: %.2f degrees\\n", angle);\par
+ return 0;\par
+\}\par
+Program14\par
+#include <stdio.h>\par
+int main() \{\par
+ float grades[] = \{g1, g2, g3, g4, g5\}; // Replace g1, g2, g3, g4, g5 with actual grade points\par
+ float credits[] = \{c1, c2, c3, c4, c5\}; // Replace c1, c2, c3, c4, c5 with actual credits\par
+ int k = 5; // Number of courses\par
+ float spi = 0;\par
+ float totalCredits = 0;\par
+ for (int i = 0; i < k; i++) \{\par
+ spi += (grades[i] * credits[i]);\par
+ totalCredits += credits[i];\par
+ \}\par
+ spi /= totalCredits;\par
+ printf("SPI for k = 5: %.2f\\n", spi);\par
+ return 0;\par
+\}\par
+Program15\par
+#include <stdio.h>\par
+int main() \{\par
+ float wavelength, speed, frequency;\par
+ printf("Enter the wavelength (in meters): ");\par
+ scanf("%f", &wavelength);\par
+ printf("Enter the speed of the wave (in meters/second): ");\par
+ scanf("%f", &speed);\par
+ frequency = speed / wavelength;\par
+ printf("Frequency of the wave: %.2f Hz\\n", frequency);\par
+ return 0;\par
+\}\par
+Program16\par
+#include <stdio.h>\par
+#include <math.h>\par
+int main() \{\par
+ float initialVelocity = 30.0;\par
+ float acceleration = 5.0;\par
+ float distance = 70.0;\par
+ float finalVelocity;\par
+ finalVelocity = sqrt(initialVelocity * initialVelocity + 2 * acceleration * distance);\par
+ printf("Final velocity of the car: %.2f m/s\\n", finalVelocity);\par
+ return 0;\par
+\}\par
+Program17\par
+#include <stdio.h>\par
+int main() \{\par
+ float initialVelocity = 0.0; // Starting from rest\par
+ float acceleration = 4.0;\par
+ float time = 3.0;\par
+ float finalVelocity, distance;\par
+ finalVelocity = initialVelocity + acceleration * time;\par
+ distance = initialVelocity * time + 0.5 * acceleration * time * time;\par
+ printf("(a) Final velocity of the horse: %.2f m/s\\n", finalVelocity);\par
+ printf("(b) Distance traveled by the horse: %.2f meters\\n", distance);\par
+ return 0;\par
+\}\par
+Program18\par
+#include <stdio.h>\par
+int main() \{\par
+ int rollNumber = 12345678; // Replace with your university roll number\par
+ int lastFourDigits, sum = 0;\par
+ lastFourDigits = rollNumber % 10000;\par
+ while (lastFourDigits > 0) \{\par
+ sum += lastFourDigits % 10;\par
+ lastFourDigits /= 10;\par
+ \}\par
+ printf("Sum of the last four digits of the roll number: %d\\n", sum);\par
+ return 0;\par
+\}\par
+Program19\par
+#include <stdio.h>\par
+int main() \{\par
+ float heightInCm = 175.0; // Replace with your height in centimeters\par
+ float weightInKgs = 70.0; // Replace with your weight in kilograms\par
+ float cmToInch = 0.393701;\par
+ float kgToPound = 2.20462;\par
+ float heightInFeet = heightInCm * cmToInch / 12.0;\par
+ float weightInPounds = weightInKgs * kgToPound;\par
+ printf("Height in feet: %.2f feet\\n", heightInFeet);\par
+ printf("Weight in pounds: %.2f pounds\\n", weightInPounds);\par
+ return 0;\par
+\}\par
+Program20\par
+char option;\par
+int sum = 0;\par
+float product = 1.0;\par
+Program21\par
+#include <stdio.h>\par
+int main() \{\par
+ int numbers[9];\par
+ // Read nine integers\par
+ for (int i = 0; i < 9; i++) \{\par
+ scanf("%d", &numbers[i]);\par
+ \}\par
+ // Display three numbers in a line separated by commas\par
+ for (int i = 0; i < 9; i++) \{\par
+ printf("%d", numbers[i]);\par
+ if (i % 3 == 2) \{\par
+ printf("\\n");\par
+ \} else \{\par
+ printf(", ");\par
+ \}\par
+ \}\par
+ return 0;\par
+\}\par
+Q22:\par
+ Header files in C contain declarations of functions, variables, and macros that are used in your \par
+program. They allow you to include pre-written code and libraries in your program. They are \par
+included using #include directives.\par
+Q23:\par
+ The output of the given program is "56 70 38". The value 070 is treated as an octal (base 8) \par
+number, so it's equivalent to 56 in decimal, 70 in octal, and 38 in hexadecimal.\par
+Q24:\par
+ The output of the program is "GLA UNIVERSITY12". The printf function returns the number of \par
+characters printed, which in this case is the length of the string "GLA UNIVERSITY," which is 12 \par
+characters.\par
+Q25:\par
+ Library functions in C are pre-written functions provided by the C standard library that can be used \par
+to perform common tasks. Four examples of library functions are printf(), scanf(), strlen(), and \par
+sqrt().\par
+Q26:\par
+ The output of the program is "28 34 1c". It subtracts the number of characters printed by the \par
+printf("Hi") statement from the number of characters printed by the "C is placement oriented \par
+Language" statement and then prints the result in decimal, octal, and hexadecimal.\par
+Q27:\par
+ The scanf function returns the number of input items successfully matched and assigned. So, \par
+printf("%d", scanf("%d%d", &a, &b)); will print the number of successfully scanned integers.\par
+Q28:\par
+ The output of the program is " "C % FOR % PLACEMENT"" (including the double quotes). The \par
+escape sequence %% is used to print a single % character.\par
+Program29\par
+#include <stdio.h>\par
+int main() \{\par
+ double distance;\par
+ double time = 4.0; // 4 hours\par
+ printf("Enter the distance in kilometers: ");\par
+ scanf("%lf", &distance);\par
+ double speed = distance / time;\par
+ \par
+ printf("The speed of the bus is %.2lf km/h\\n", speed);\par
+ return 0;\par
+\}\par
+Program30\par
+#include <stdio.h>\par
+int main() \{\par
+ int satyam_marks = 50;\par
+ int suman_marks = 70;\par
+ int shyam_marks = 80;\par
+ int total_marks = satyam_marks + suman_marks + shyam_marks;\par
+ double average_marks = (double)total_marks / 3.0;\par
+ printf("Average marks of the three participants: %.2lf\\n", average_marks);\par
+ return 0;\par
+\}\par
+Program31\par
+#include <stdio.h>\par
+int main() \{\par
+ int mohan_money = 100; // Initial amount given to Mohan\par
+ int saurav_money = 50; // Initial amount given to Saurav\par
+ int sajal_money = 75; // Initial amount given to Sajal\par
+ // Swapping the money between Saurav and Sajal\par
+ int temp = saurav_money;\par
+ saurav_money = sajal_money;\par
+ sajal_money = temp;\par
+ printf("Mohan rectified the mistake.\\n");\par
+ printf("Mohan now has %d rupees.\\n", mohan_money);\par
+ printf("Saurav now has %d rupees.\\n", saurav_money);\par
+ printf("Sajal now has %d rupees.\\n", sajal_money);\par
+ return 0;\par
+\}\par
+Program32\par
+#include <stdio.h>\par
+int main() \{\par
+ float speed_kmph = 4.0; // Speed in km/h\par
+ float time_min = 3.0; // Time in minutes\par
+ // Convert time to hours\par
+ float time_hours = time_min / 60;\par
+ // Calculate distance\par
+ float distance_km = speed_kmph * time_hours;\par
+ printf("Distance traveled by you: %.2f kilometers\\n", distance_km);\par
+ return 0;\par
+\}\par
+Q33:\par
+ Yes, you can combine multiple escape sequences in a single line of program code.\par
+Q34:\par
+ Comments in C are used to provide explanations and descriptions within the source code. They \par
+are not executed by the compiler. Comments in C can be inserted using /* */ for multiline \par
+comments and // for single-line comments.\par
+Q35:\par
+ The statement scanf("%d", number); is incorrect because it should be scanf("%d", \par
+&number); to correctly read an integer and store it in the variable number.\par
+Q36:\par
+ The output of the program is "Yes." This is because sizeof(int) is always greater than -1, so \par
+the "Yes" branch is executed.\par
+For the remaining questions, I'll provide brief answers:\par
+Q37:\par
+ Variable names "gross-salary," "INTEREST," "avg," and "thereisbookinmysoup" are valid in C.\par
+Q38:\par
+ To calculate the time required to completely clean the tank, you can use the formula: time = \par
+(tank_capacity / drain_rate), where tank_capacity is 175 gallons and drain_rate is \par
+25 gallons per hour.\par
+Q39:\par
+ To calculate the time when the battery power is at 75%, you can use the formula: x = (1 - y) \par
+/ (-0.2), where y is 0.75 (75%).\par
+For the multiple-choice questions (Q40 to Q47), I'll provide the answers:\par
+Q40:\par
+ d. Assembler\par
+Q41:\par
+ c. %o\par
+Q42:\par
+ a. %e\par
+Q43:\par
+ b. array\par
+Q44:\par
+ c. "hell"8\par
+Q45:\par
+ d. Garbage, 5\par
+Q46:\par
+ b. Basic_pay\par
+Q47:\par
+ a. c1\par
+Program53\par
+-32766\par
+Program54\par
+Temperature in Fahrenheit is 41.00\par
+}
+ 
